@@ -1,0 +1,254 @@
+:root {
+  --night: #12111f;
+  --light: #f2f5f9;
+  --ligth-grey: #cdd5e0;
+  --grey: #97a3b6;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+body {
+  background-color: var(--night);
+  color: var(--light);
+  background-size: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+/* LAYOUT */
+.container {
+  padding: 0 24px;
+  padding-bottom: 64px;
+  @media screen and (min-width: 1024px) {
+    max-width: 810px;
+    padding: 0 32px;
+    margin: 0 auto;
+    padding-bottom: 64px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  background-image: url("../images/faq-title-bg.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .heading {
+    padding-top: 36px;
+    padding-bottom: 48px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 640px) {
+      padding-top: 72px;
+      padding-bottom: 96px;
+    }
+
+    .title {
+      color: #7e6b7d;
+      font-size: 24px;
+      line-height: 36px;
+
+      @media screen and (min-width: 640px) {
+        font-size: 34px;
+        line-height: 40px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 48px;
+        line-height: 72px;
+      }
+    }
+  }
+}
+
+.header {
+  h3 {
+    font-weight: 500;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    width: 80%;
+
+    font-size: 16px;
+    line-height: 22px;
+
+    @media screen and (min-width: 640px) {
+      font-size: 20px;
+      line-height: 16px;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+  }
+
+  p {
+    color: var(--grey);
+    font-size: 12px;
+    width: 80%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 640px) {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+}
+
+/* TABS */
+.tabs {
+  padding: 0px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 640px) {
+    padding: 0px 74px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+  }
+}
+
+.tab-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 24px;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+
+.tab {
+  display: inline-flex;
+  flex: calc(50% - 24px);
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 20px;
+
+  a {
+    display: inline-block;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--light);
+    font-size: 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  &.active {
+    a {
+      background-color: #41414d;
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    flex: calc(33% - 24px);
+  }
+
+  @media screen and (min-width: 1024px) {
+    flex: initial;
+  }
+}
+
+/* ACCORDION */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border-radius: 16px;
+
+  &.active {
+    background-color: #2b2936;
+  }
+
+  .accordion-trigger {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    background-color: transparent;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    padding-bottom: 8px;
+    color: var(--light);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    justify-content: space-between;
+
+    @media screen and (min-width: 640px) {
+      font-size: 20px;
+    }
+  }
+
+  &.active {
+    .accordion-trigger {
+      padding-top: 20px;
+      background-color: transparent;
+    }
+  }
+}
+
+.accordion-item {
+  &.active {
+    .accordion-panel {
+      display: block;
+    }
+  }
+
+  .accordion-panel {
+    display: none;
+    color: #97a3b6;
+  }
+
+  .accordion-icon {
+    color: #97a3b6;
+    font-size: 18px;
+
+    @media screen and (min-width: 640px) {
+      font-size: 24px;
+    }
+  }
+}
+
+.accordion-panel {
+  background-color: #2b2936;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 28px;
+  padding-top: 8px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media screen and (min-width: 640px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
