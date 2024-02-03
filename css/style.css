@@ -96,6 +96,7 @@ ul {
     font-size: 20px;
     line-height: 16px;
     margin-bottom: 16px;
+    margin-top: 8px;
     width: 100%;
   }
 }
@@ -154,6 +155,7 @@ ul {
   border-radius: 20px;
   white-space: nowrap;
   cursor: pointer;
+  line-height: 22px;
 }
 .tab.active a {
   background-color: #41414d;
@@ -208,7 +210,7 @@ ul {
   }
 }
 .accordion-item.active .accordion-trigger {
-  padding-top: 20px;
+  padding-top: 28px;
   background-color: transparent;
   color: var(--light);
 }
