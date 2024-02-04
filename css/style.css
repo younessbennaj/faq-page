@@ -186,6 +186,7 @@ ul {
   background-color: #2b2936;
 }
 .accordion-item .accordion-trigger {
+  cursor: pointer;
   display: flex;
   align-items: center;
   font-size: 14px;
